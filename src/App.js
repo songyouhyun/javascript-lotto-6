@@ -13,6 +13,16 @@ class App {
       Console.print(lotto.numbers);
     }
 
+    let winningNumbers = await Console.readLineAsync('\n당첨 번호를 입력해 주세요.\n');
+    winningNumbers = winningNumbers
+        .trim()
+        .split(',')
+        .map(
+            (value) => parseInt(value)
+        );
+
+    let bonusNumber = await Console.readLineAsync('\n보너스 번호를 입력해주세요.\n');
+    bonusNumber = parseInt(bonusNumber);
   }
 }
 
